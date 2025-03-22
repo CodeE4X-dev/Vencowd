@@ -1,0 +1,286 @@
+:root {
+    /* --------- BASE THEME - MIDNIGHT BLUE --------- */
+    --blurple-replace: #5865f2;
+    --background-primary: #0d1117;
+    --background-secondary: #161b22;
+    --background-floating: #21262d;
+    --background-secondary-alt: var(--background-floating);
+    --background-tertiary: #0a0c10;
+    --background-accent: #1d2230;
+    --userarea-background: var(--background-tertiary);
+    --header-primary: #f0f6fc;
+    --header-secondary: #8b949e;
+    --elevation-low: 0 1px 0 rgba(40, 40, 50, 0.2), 0 1.5px 0 rgba(60, 60, 70, 0.05), 0 2px 0 rgba(40, 40, 50, 0.05);
+    --elevation-high: 0 8px 16px rgba(0, 0, 0, 0.24);
+    --channels-default: #8b949e;
+    --channeltextarea-background: #0a0c10;
+    --voice-color: var(--brand-experiment);
+    --guild-header-text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+    --activity-card-background: #0f0f0f;
+    --interactive-normal: #8b949e;
+    --interactive-hover: #dcddde;
+    --interactive-active: #fff;
+    --interactive-muted: #4c5258;
+    --background-modifier-hover: rgba(33, 38, 45, 0.26);
+    --background-modifier-active: rgba(33, 38, 45, 0.44);
+    --background-modifier-selected: rgba(33, 38, 45, 0.52);
+    --background-modifier-accent: #21262d;
+    --text-link: #58a6ff;
+    --text-normal: #c9d1d9;
+    --text-muted: #8b949e;
+    --border-color: #30363d;
+    --border: 1px solid var(--border-color);
+    --blurple-border: 1px solid #1f2f47;
+    --border-radius: 5px;
+    --divide-color: #5865f2;
+    --brand-experiment: #5865f2;
+}
+
+/* Deep Ocean Theme Variant */
+.theme-deep-ocean {
+    --blurple-replace: #7289DA;
+    --background-primary: #0f111a;
+    --background-secondary: #141925;
+    --background-floating: #1c2033;
+    --background-tertiary: #090b13;
+    --background-accent: #1e2a4a;
+    --header-primary: #edf0ff;
+    --header-secondary: #a9b1d6;
+    --channels-default: #a9b1d6;
+    --interactive-normal: #a9b1d6;
+    --interactive-muted: #565f89;
+    --text-normal: #c0caf5;
+    --text-muted: #a9b1d6;
+    --text-link: #7aa2f7;
+    --border-color: #29324a;
+    --divide-color: #7aa2f7;
+    --brand-experiment: #7aa2f7;
+}
+
+/* Dracula Theme Variant */
+.theme-dracula {
+    --blurple-replace: #bd93f9;
+    --background-primary: #282a36;
+    --background-secondary: #343746;
+    --background-floating: #44475a;
+    --background-tertiary: #1e1f29;
+    --background-accent: #383a59;
+    --header-primary: #f8f8f2;
+    --header-secondary: #bfbfbf;
+    --channels-default: #bfbfbf;
+    --interactive-normal: #bfbfbf;
+    --interactive-muted: #6272a4;
+    --text-normal: #f8f8f2;
+    --text-muted: #bfbfbf;
+    --text-link: #8be9fd;
+    --border-color: #44475a;
+    --divide-color: #ff79c6;
+    --brand-experiment: #bd93f9;
+}
+
+/* Nord Theme Variant */
+.theme-nord {
+    --blurple-replace: #88c0d0;
+    --background-primary: #2e3440;
+    --background-secondary: #3b4252;
+    --background-floating: #434c5e;
+    --background-tertiary: #242933;
+    --background-accent: #4c566a;
+    --header-primary: #eceff4;
+    --header-secondary: #d8dee9;
+    --channels-default: #d8dee9;
+    --interactive-normal: #d8dee9;
+    --interactive-muted: #7b88a1;
+    --text-normal: #e5e9f0;
+    --text-muted: #d8dee9;
+    --text-link: #88c0d0;
+    --border-color: #4c566a;
+    --divide-color: #81a1c1;
+    --brand-experiment: #88c0d0;
+}
+
+/* Common styling for all themes */
+.theme-dark {
+    --text-positive: hsl(139, calc(var(--saturation-factor, 1)*66.8%), 58.6%);
+    --text-warning: hsl(38, calc(var(--saturation-factor, 1)*95.7%), 54.1%);
+    --text-danger: hsl(359, calc(var(--saturation-factor, 1)*82.6%), 59.4%);
+    --info-positive-text: #fff;
+    --info-warning-text: #fff;
+    --info-danger-text: #fff;
+    --info-help-background: hsla(197, calc(var(--saturation-factor, 1)*100%), 47.8%, 0.1);
+    --info-help-foreground: hsl(197, calc(var(--saturation-factor, 1)*100%), 47.8%);
+    --info-help-text: #fff;
+    --status-warning-text: #000;
+    --scrollbar-thin-thumb: var(--background-floating);
+    --scrollbar-thin-track: transparent;
+    --scrollbar-auto-thumb: var(--background-floating);
+    --scrollbar-auto-track: rgba(17, 19, 24, 0.308);
+    --scrollbar-auto-scrollbar-color-thumb: var(--background-floating);
+    --scrollbar-auto-scrollbar-color-track: rgba(17, 19, 24, 0.308);
+    --elevation-stroke: 0 0 0 1px rgba(4, 4, 5, 0.15);
+    --elevation-medium: 0 4px 4px rgba(0, 0, 0, 0.16);
+    --logo-primary: var(--header-primary);
+    --control-brand-foreground: hsl(227, calc(var(--saturation-factor, 1)*57.9%), 77.6%);
+    --control-brand-foreground-new: hsl(235, calc(var(--saturation-factor, 1)*86.1%), 77.5%);
+    --background-mentioned: rgba(var(--background-floating), 0.3);
+    --background-mentioned-hover: rgba(var(--background-floating), 0.4);
+    --background-message-hover: rgba(4, 4, 5, 0.07);
+    --activity-card-background: var(--background-secondary-alt);
+    --textbox-markdown-syntax: var(--interactive-muted);
+    --input-background: var(--background-primary);
+    --modal-background: var(--background-floating);
+    --modal-footer-background: var(--background-secondary);
+    --home-background: var(--background-primary);
+    --bg-overlay-chat: var(--background-primary);
+}
+
+/* Border styling */
+.interactive_bf202d, .interactive__972a0 {
+  border: 1px solid transparent;
+}
+
+.searchBar__5ec2f, .background__1fed1, .badgeList__1fed1, .container_fea832, 
+.iconContainer__0624f, .circle__8cc9a, .stepNumber_d9914b, .box_d9914b, 
+.container_a45028, .cardPrimary_a298b, .perkCard_b62c4e, .guildContainer__5dba5, 
+.wrapper__5b98e, .container_c50183, .paymentPane__01014, .outer_c0bea0, 
+.overlay__24502, .messageContainer__95796, .searchBar__97492, .tutorial__2692d, 
+.messages__1ccd1, .button__06eda, .friendRequestsButton__523aa, .searchBox_d9c882, 
+.inner_a99829, .searchBar_c0e32c.container_a45028, .contentWrapper__08434, 
+.container_cb32c7, .searchResult__02a39, .emojiErrorItem__67954, 
+.tiers_f15dca > .tier_f15dca:not(:first-child), .descriptionBox__981f7, 
+.theme-dark .card_dc2e44, .cardPrimary__73069.editable__73069, .card_ea91d1, 
+.avatarCard_da92c3, .viewServerButton_adff39, .button__71c22, .otherRoles__71c22, 
+.copyInput_fffc15, .emptyChannelIcon__00de6, .button_f563df, .wrapper_f7ecac, 
+.button_e131a9 .buttonColor_e131a9, .button_e131a9.buttonColor_e131a9, 
+.modeSelected__2ea32 .link__2ea32, .modeSelected__2ea32:hover .link__2ea32, 
+.prompt__5d7c9, .perks__30359, .perksList__3bf54, .upsellFooter__5e07c, 
+.input_ac6cb0, .interactiveSelected__972a0, .prompt_fe70ca, .optionButtonWrapper__270d7, 
+.mainCard_f369db, .addReactButton__34c2c, .buttonInner__34c2c, .reaction_f8896c, 
+.wrapper__44df5, .reactionBtn__23977.forceShow__23977 {
+  border: var(--border);
+}
+
+/* Improved UI elements */
+.channelTextArea_f75fb0, .channelTextArea__74017, .button_e6e74f, 
+.searchBarComponent__35e86, .inset_bf1984, .menu_c1e9c4, .container__9271d, 
+.reaction__23977, .reactionBtn__23977.forceShowLook_ec6b19, .accountProfileCard__1fed1, 
+.inner_c0bea0.biteSize_c0bea0, .container_fcf29c, .lookFilled__3f413.select__3f413, 
+.row__0624f, .connectContainer_c7f964, .connection_c7f964, .metadataContainer_c7f964, 
+.connectedAccountContainer_e6abe8, .card__39ec2, .popoverReactionHoverBar_f84418, 
+.panel_c0bea0, .skuSelectModalHeader_e50a4d, .skuSelectModalContent_e50a4d, 
+.contentWrapper__9c62c, .avatarUploaderInnerSquare_e04502, 
+.avatarUploadIcon_e04502.hideDefaultIcon_e04502, .container_d8f25b, .root__49fc1, 
+.tierHeaderUnlocked_f15dca, .editCard_a25a68, .featureCard_bebc5b, 
+.howItWorksContainer_aa72d6, .mainTableContainer_dd2627, .movedTable_dd2627, 
+.theme-dark .card__84e3e, .container_cec934, .autocomplete__13533, .upload_aa605f, 
+.wrapper_f7ecac {
+    background-color: var(--background-secondary-alt);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover effects */
+.channelTextArea_f75fb0:hover, .button_e6e74f:hover, .searchBarComponent__35e86:hover,
+.menu_c1e9c4:hover, .container__9271d:hover, .card__39ec2:hover {
+    border-color: var(--brand-experiment);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--background-floating);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--interactive-muted);
+}
+
+/* Message hover effect */
+.message-2qnXI6:hover {
+    background-color: var(--background-modifier-hover) !important;
+}
+
+/* Mentioned message styling */
+.mentioned-xhSam7:before {
+    background-color: var(--brand-experiment);
+    width: 3px;
+}
+
+.mentioned-xhSam7 {
+    background-color: var(--background-mentioned) !important;
+}
+
+/* Theme selector - Add this to your Discord custom CSS */
+.theme-selector {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 9999;
+    background: var(--background-floating);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.theme-selector button {
+    background: var(--background-secondary);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    color: var(--text-normal);
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.theme-selector button:hover {
+    background: var(--background-modifier-hover);
+}
+
+/* Add this JavaScript to your theme to enable theme switching */
+
+document.addEventListener('DOMContentLoaded', () => {
+    const themeSelector = document.createElement('div');
+    themeSelector.className = 'theme-selector';
+    
+    const themes = [
+        { name: 'Default Dark', class: '' },
+        { name: 'Deep Ocean', class: 'theme-deep-ocean' },
+        { name: 'Dracula', class: 'theme-dracula' },
+        { name: 'Nord', class: 'theme-nord' }
+    ];
+    
+    themes.forEach(theme => {
+        const button = document.createElement('button');
+        button.textContent = theme.name;
+        button.addEventListener('click', () => {
+            document.body.className = document.body.className.replace(/theme-\w+-\w+/g, '');
+            if (theme.class) {
+                document.body.classList.add(theme.class);
+            }
+            localStorage.setItem('discord-theme', theme.class);
+        });
+        themeSelector.appendChild(button);
+    });
+    
+    document.body.appendChild(themeSelector);
+    
+    // Load saved theme
+    const savedTheme = localStorage.getItem('discord-theme');
+    if (savedTheme) {
+        document.body.classList.add(savedTheme);
+    }
+});
