@@ -1,0 +1,886 @@
+/* Base Discord Theme Variables */
+:root {
+    /* --------- BASE THEME --------- */
+    --blurple-replace: #7289DA;
+    --background-primary: rgb(9, 12, 16);
+    --background-secondary: rgb(13, 17, 23);
+    --background-floating: rgb(22, 27, 34);
+    --background-secondary-alt: var(--background-floating);
+    --background-tertiary: rgb(7, 10, 16);
+    --background-accent: rgb(17, 29, 46);
+    --userarea-background: var(--background-tertiary);
+    --header-primary: rgb(240, 246, 252);
+    --header-secondary: rgb(139, 148, 158);
+    --elevation-low: 0 1px 0 rgba(40, 40, 50, 0.2), 0 1.5px 0 rgba(60, 60, 70, 0.05), 0 2px 0 rgba(40, 40, 50, 0.05);
+    --elevation-high: 0 8px 16px rgba(0, 0, 0, 0.24);
+    --channels-default: rgb(139, 148, 158);
+    --channeltextarea-background: rgb(7, 10, 16);
+    --voice-color: var(--brand-experiment);
+    --guild-header-text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+    --activity-card-background: #0f0f0f;
+    --interactive-normal: rgb(139, 148, 158);
+    --interactive-hover: #dcddde;
+    --interactive-active: #fff;
+    --interactive-muted: rgb(76, 82, 88);
+    --background-modifier-hover: rgba(33, 38, 45, 0.26);
+    --background-modifier-active: rgba(33, 38, 45, 0.44);
+    --background-modifier-selected: rgba(33, 38, 45, 0.52);
+    --background-modifier-accent: rgb(33, 38, 45);
+    --text-link: rgb(88, 166, 255);
+    --text-normal: rgb(201, 209, 217);
+    --text-muted: rgb(139, 148, 158);
+    --deprecated-panel-background: #2a2f29;
+    --deprecated-card-bg: var(--background-secondary);
+    --deprecated-card-editable-bg: var(--background-secondary);
+    --deprecated-store-bg: #36393f;
+    --deprecated-quickswitcher-input-background: #72767d;
+    --deprecated-quickswitcher-input-placeholder: hsla(0, 0%, 100%, 0.3);
+    --deprecated-text-input-bg: var(--channeltextarea-background);
+    --deprecated-text-input-border: var(--border-color);
+    --deprecated-text-input-border-hover: #040405;
+    --deprecated-text-input-border-disabled: #202225;
+    --deprecated-text-input-prefix: #dcddde;
+    --background-accent-1: rgba(15, 15, 15, 0.1);
+    --background-accent-3: rgba(15, 15, 15, 0.3);
+    --background-floating-2: rgba(0, 0, 0, 0.2);
+    --border: 1px solid rgb(48, 54, 61);
+    --border-color: rgb(48, 54, 61);
+    --blurple-border: 1px solid rgb(31, 47, 71);
+    --border-radius: 5px;
+    --divide-color: var(--brand-experiment);
+    --brand-experiment: rgb(88, 101, 242);
+    --deprecated-quickswitcher-input-background: var(--channeltextarea-background);
+}
+
+/* Theme Definitions */
+.theme-light {
+    --background-secondary: rgb(13, 17, 23);
+    --header-primary: rgb(240, 246, 252);
+    --header-secondary: rgb(139, 148, 158);
+    --background-primary: rgb(22, 27, 34);
+    --text-normal: rgb(201, 209, 217);
+    --background-floating: rgb(22, 27, 34);
+    --background-tertiary: transparent;
+    --deprecated-text-input-bg: rgb(7, 10, 16);
+}
+
+.theme-dark {
+    --text-positive: hsl(139, calc(var(--saturation-factor, 1)*66.8%), 58.6%);
+    --text-warning: hsl(38, calc(var(--saturation-factor, 1)*95.7%), 54.1%);
+    --text-danger: hsl(359, calc(var(--saturation-factor, 1)*82.6%), 59.4%);
+    --info-positive-text: #fff;
+    --info-warning-text: #fff;
+    --info-danger-text: #fff;
+    --info-help-background: hsla(197, calc(var(--saturation-factor, 1)*100%), 47.8%, 0.1);
+    --info-help-foreground: hsl(197, calc(var(--saturation-factor, 1)*100%), 47.8%);
+    --info-help-text: #fff;
+    --status-warning-text: #000;
+    --scrollbar-thin-thumb: rgb(22, 27, 34);
+    --scrollbar-thin-track: transparent;
+    --scrollbar-auto-thumb: rgb(22, 27, 34);
+    --scrollbar-auto-track: rgba(17, 19, 24, 0.308);
+    --scrollbar-auto-scrollbar-color-thumb: rgb(22, 27, 34);
+    --scrollbar-auto-scrollbar-color-track: rgba(17, 19, 24, 0.308);
+    --elevation-stroke: 0 0 0 1px rgba(4, 4, 5, 0.15);
+    --elevation-low: 0 1px 0 rgba(4, 4, 5, 0.2), 0 1.5px 0 rgba(6, 6, 7, 0.05), 0 2px 0 rgba(4, 4, 5, 0.05);
+    --elevation-medium: 0 4px 4px rgba(0, 0, 0, 0.16);
+    --elevation-high: 0 8px 16px rgba(0, 0, 0, 0.24);
+    --logo-primary: rgb(240, 246, 252);
+    --control-brand-foreground: hsl(227, calc(var(--saturation-factor, 1)*57.9%), 77.6%);
+    --control-brand-foreground-new: hsl(235, calc(var(--saturation-factor, 1)*86.1%), 77.5%);
+    --background-mentioned: rgba(13, 17, 23, 0.466);
+    --background-mentioned-hover: rgba(20, 33, 53, 0.233);
+    --background-message-hover: rgba(4, 4, 5, 0.07);
+    --activity-card-background: #202225;
+    --textbox-markdown-syntax: rgb(82, 89, 95);
+    --background-primary: rgb(9, 12, 16);
+    --background-secondary: rgb(13, 17, 23);
+    --background-floating: rgb(22, 27, 34);
+    --background-secondary-alt: var(--background-floating);
+    --background-tertiary: rgb(7, 10, 16);
+    --background-accent: rgb(17, 29, 46);
+    --userarea-background: var(--background-tertiary);
+    --background-modifier-accent: var(--border-color);
+    --deprecated-text-input-border-hover: var(--border-color);
+    --primary-700: var(--border-color);
+    --activity-card-background: var(--background-secondary-alt);
+    --input-background: var(--background-primary);
+    --modal-background: var(--background-floating);
+    --modal-footer-background: var(--background-secondary);
+    --home-background: var(--background-primary);
+    --bg-overlay-chat: var(--background-primary);
+}
+
+/* Additional Themes */
+.theme-midnight {
+    --background-primary: #0a0a0f;
+    --background-secondary: #0f0f18;
+    --background-floating: #14141e;
+    --background-secondary-alt: #14141e;
+    --background-tertiary: #080811;
+    --background-accent: #1a1a2e;
+    --header-primary: #e0e0ff;
+    --header-secondary: #a0a0cc;
+    --text-normal: #c8c8e0;
+    --text-muted: #9090b0;
+    --interactive-normal: #9090b0;
+    --interactive-hover: #c8c8e0;
+    --interactive-active: #ffffff;
+    --interactive-muted: #5c5c7a;
+    --brand-experiment: #5865f2;
+    --border-color: #2a2a40;
+    --border: 1px solid #2a2a40;
+    --channeltextarea-background: #080811;
+}
+
+.theme-nord {
+    --background-primary: #2e3440;
+    --background-secondary: #3b4252;
+    --background-floating: #434c5e;
+    --background-secondary-alt: #434c5e;
+    --background-tertiary: #2e3440;
+    --background-accent: #4c566a;
+    --header-primary: #eceff4;
+    --header-secondary: #e5e9f0;
+    --text-normal: #d8dee9;
+    --text-muted: #9aa5b8;
+    --interactive-normal: #9aa5b8;
+    --interactive-hover: #d8dee9;
+    --interactive-active: #eceff4;
+    --interactive-muted: #4c566a;
+    --brand-experiment: #88c0d0;
+    --border-color: #4c566a;
+    --border: 1px solid #4c566a;
+    --channeltextarea-background: #2e3440;
+}
+
+.theme-dracula {
+    --background-primary: #282a36;
+    --background-secondary: #343746;
+    --background-floating: #44475a;
+    --background-secondary-alt: #44475a;
+    --background-tertiary: #21222c;
+    --background-accent: #383a4a;
+    --header-primary: #f8f8f2;
+    --header-secondary: #bd93f9;
+    --text-normal: #f8f8f2;
+    --text-muted: #6272a4;
+    --interactive-normal: #6272a4;
+    --interactive-hover: #f8f8f2;
+    --interactive-active: #ffffff;
+    --interactive-muted: #4d5b8c;
+    --brand-experiment: #bd93f9;
+    --border-color: #44475a;
+    --border: 1px solid #44475a;
+    --channeltextarea-background: #21222c;
+}
+
+.theme-solarized {
+    --background-primary: #002b36;
+    --background-secondary: #073642;
+    --background-floating: #094352;
+    --background-secondary-alt: #094352;
+    --background-tertiary: #00232c;
+    --background-accent: #0e5162;
+    --header-primary: #fdf6e3;
+    --header-secondary: #93a1a1;
+    --text-normal: #eee8d5;
+    --text-muted: #839496;
+    --interactive-normal: #839496;
+    --interactive-hover: #eee8d5;
+    --interactive-active: #fdf6e3;
+    --interactive-muted: #586e75;
+    --brand-experiment: #2aa198;
+    --border-color: #094352;
+    --border: 1px solid #094352;
+    --channeltextarea-background: #00232c;
+}
+
+.theme-synthwave {
+    --background-primary: #241b2f;
+    --background-secondary: #2d2241;
+    --background-floating: #372a4e;
+    --background-secondary-alt: #372a4e;
+    --background-tertiary: #1a1423;
+    --background-accent: #413361;
+    --header-primary: #f8f8ff;
+    --header-secondary: #ff8adc;
+    --text-normal: #f0e8ff;
+    --text-muted: #c3b5e6;
+    --interactive-normal: #c3b5e6;
+    --interactive-hover: #f0e8ff;
+    --interactive-active: #ffffff;
+    --interactive-muted: #7e6bad;
+    --brand-experiment: #ff7edb;
+    --border-color: #413361;
+    --border: 1px solid #413361;
+    --channeltextarea-background: #1a1423;
+}
+
+.theme-forest {
+    --background-primary: #1e2a1e;
+    --background-secondary: #2a3a2a;
+    --background-floating: #344834;
+    --background-secondary-alt: #344834;
+    --background-tertiary: #182218;
+    --background-accent: #3d553d;
+    --header-primary: #e8f0e8;
+    --header-secondary: #a5c2a5;
+    --text-normal: #d8e8d8;
+    --text-muted: #95b095;
+    --interactive-normal: #95b095;
+    --interactive-hover: #d8e8d8;
+    --interactive-active: #ffffff;
+    --interactive-muted: #5a7a5a;
+    --brand-experiment: #6ba36b;
+    --border-color: #3d553d;
+    --border: 1px solid #3d553d;
+    --channeltextarea-background: #182218;
+}
+
+/* Theme Selector UI */
+#theme-selector {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--background-floating);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    z-index: 9999;
+    width: 500px;
+    max-width: 90vw;
+    box-shadow: var(--elevation-high);
+}
+
+#theme-selector.visible {
+    display: block;
+}
+
+#theme-selector-header {
+    margin-bottom: 20px;
+    border-bottom: var(--border);
+    padding-bottom: 10px;
+}
+
+#theme-selector-header h2 {
+    color: var(--header-primary);
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+}
+
+#theme-selector-header p {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin: 0;
+}
+
+#theme-selector-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.theme-option {
+    padding: 10px;
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.theme-option:hover {
+    border-color: var(--brand-experiment);
+}
+
+.theme-option.selected {
+    border-color: var(--brand-experiment);
+}
+
+.theme-option-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.theme-option-name {
+    color: var(--header-primary);
+    font-weight: bold;
+}
+
+.theme-option-preview {
+    height: 60px;
+    border-radius: var(--border-radius);
+    margin-bottom: 10px;
+    display: flex;
+    overflow: hidden;
+}
+
+.theme-option-sidebar {
+    width: 25%;
+}
+
+.theme-option-content {
+    width: 75%;
+}
+
+.theme-option-description {
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+#theme-selector-footer {
+    display: flex;
+    justify-content: flex-end;
+    border-top: var(--border);
+    padding-top: 10px;
+}
+
+#theme-selector-close {
+    background-color: var(--brand-experiment);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+#theme-selector-close:hover {
+    background-color: var(--brand-experiment);
+    opacity: 0.8;
+}
+
+/* Theme Preview Colors */
+.theme-option[data-theme="light"] .theme-option-sidebar {
+    background-color: rgb(13, 17, 23);
+}
+.theme-option[data-theme="light"] .theme-option-content {
+    background-color: rgb(22, 27, 34);
+}
+
+.theme-option[data-theme="dark"] .theme-option-sidebar {
+    background-color: rgb(13, 17, 23);
+}
+.theme-option[data-theme="dark"] .theme-option-content {
+    background-color: rgb(9, 12, 16);
+}
+
+.theme-option[data-theme="midnight"] .theme-option-sidebar {
+    background-color: #0f0f18;
+}
+.theme-option[data-theme="midnight"] .theme-option-content {
+    background-color: #0a0a0f;
+}
+
+.theme-option[data-theme="nord"] .theme-option-sidebar {
+    background-color: #3b4252;
+}
+.theme-option[data-theme="nord"] .theme-option-content {
+    background-color: #2e3440;
+}
+
+.theme-option[data-theme="dracula"] .theme-option-sidebar {
+    background-color: #343746;
+}
+.theme-option[data-theme="dracula"] .theme-option-content {
+    background-color: #282a36;
+}
+
+.theme-option[data-theme="solarized"] .theme-option-sidebar {
+    background-color: #073642;
+}
+.theme-option[data-theme="solarized"] .theme-option-content {
+    background-color: #002b36;
+}
+
+.theme-option[data-theme="synthwave"] .theme-option-sidebar {
+    background-color: #2d2241;
+}
+.theme-option[data-theme="synthwave"] .theme-option-content {
+    background-color: #241b2f;
+}
+
+.theme-option[data-theme="forest"] .theme-option-sidebar {
+    background-color: #2a3a2a;
+}
+.theme-option[data-theme="forest"] .theme-option-content {
+    background-color: #1e2a1e;
+}
+
+/* Theme Selector Backdrop */
+#theme-selector-backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9998;
+}
+
+#theme-selector-backdrop.visible {
+    display: block;
+}
+
+/* Inject HTML for Theme Selector */
+body::after {
+    content: "";
+    display: none;
+}
+
+/* Create the theme selector HTML structure using JavaScript */
+document.addEventListener('DOMContentLoaded', function() {
+    // Create theme selector elements
+    const backdrop = document.createElement('div');
+    backdrop.id = 'theme-selector-backdrop';
+    
+    const selector = document.createElement('div');
+    selector.id = 'theme-selector';
+    
+    const header = document.createElement('div');
+    header.id = 'theme-selector-header';
+    
+    const title = document.createElement('h2');
+    title.textContent = 'Appearance';
+    
+    const subtitle = document.createElement('p');
+    subtitle.textContent = 'Customize how Discord looks (Ctrl+4)';
+    
+    const options = document.createElement('div');
+    options.id = 'theme-selector-options';
+    
+    const footer = document.createElement('div');
+    footer.id = 'theme-selector-footer';
+    
+    const closeButton = document.createElement('button');
+    closeButton.id = 'theme-selector-close';
+    closeButton.textContent = 'Close';
+    
+    // Build the structure
+    header.appendChild(title);
+    header.appendChild(subtitle);
+    footer.appendChild(closeButton);
+    
+    selector.appendChild(header);
+    selector.appendChild(options);
+    selector.appendChild(footer);
+    
+    document.body.appendChild(backdrop);
+    document.body.appendChild(selector);
+    
+    // Define themes
+    const themes = [
+        { name: 'Light', value: 'light', description: 'Clean and bright interface' },
+        { name: 'Dark', value: 'dark', description: 'Default Discord dark theme' },
+        { name: 'Midnight', value: 'midnight', description: 'Extra dark for night owls' },
+        { name: 'Nord', value: 'nord', description: 'Cool blue arctic theme' },
+        { name: 'Dracula', value: 'dracula', description: 'Dark purple vampire theme' },
+        { name: 'Solarized', value: 'solarized', description: 'Ethan Schoonover\'s color scheme' },
+        { name: 'Synthwave', value: 'synthwave', description: 'Retro futuristic neon vibes' },
+        { name: 'Forest', value: 'forest', description: 'Calm green nature theme' }
+    ];
+    
+    // Create theme options
+    themes.forEach(theme => {
+        const option = document.createElement('div');
+        option.className = 'theme-option';
+        option.setAttribute('data-theme', theme.value);
+        
+        const optionHeader = document.createElement('div');
+        optionHeader.className = 'theme-option-header';
+        
+        const optionName = document.createElement('div');
+        optionName.className = 'theme-option-name';
+        optionName.textContent = theme.name;
+        
+        const optionCheck = document.createElement('div');
+        optionCheck.className = 'theme-option-check';
+        optionCheck.innerHTML = '✓';
+        optionCheck.style.color = 'var(--brand-experiment)';
+        optionCheck.style.display = 'none';
+        
+        const optionPreview = document.createElement('div');
+        optionPreview.className = 'theme-option-preview';
+        
+        const optionSidebar = document.createElement('div');
+        optionSidebar.className = 'theme-option-sidebar';
+        
+        const optionContent = document.createElement('div');
+        optionContent.className = 'theme-option-content';
+        
+        const optionDescription = document.createElement('div');
+        optionDescription.className = 'theme-option-description';
+        optionDescription.textContent = theme.description;
+        
+        optionHeader.appendChild(optionName);
+        optionHeader.appendChild(optionCheck);
+        
+        optionPreview.appendChild(optionSidebar);
+        optionPreview.appendChild(optionContent);
+        
+        option.appendChild(optionHeader);
+        option.appendChild(optionPreview);
+        option.appendChild(optionDescription);
+        
+        options.appendChild(option);
+    });
+    
+    // Get current theme
+    let currentTheme = localStorage.getItem('discord-theme') || 'dark';
+    document.documentElement.className = `theme-${currentTheme}`;
+    
+    // Update selected theme in UI
+    function updateSelectedTheme() {
+        document.querySelectorAll('.theme-option').forEach(option => {
+            const themeValue = option.getAttribute('data-theme');
+            const checkmark = option.querySelector('.theme-option-check');
+            
+            if (themeValue === currentTheme) {
+                option.classList.add('selected');
+                checkmark.style.display = 'block';
+            } else {
+                option.classList.remove('selected');
+                checkmark.style.display = 'none';
+            }
+        });
+    }
+    
+    updateSelectedTheme();
+    
+    // Theme option click handler
+    document.querySelectorAll('.theme-option').forEach(option => {
+        option.addEventListener('click', function() {
+            const themeValue = this.getAttribute('data-theme');
+            currentTheme = themeValue;
+            localStorage.setItem('discord-theme', themeValue);
+            document.documentElement.className = `theme-${themeValue}`;
+            updateSelectedTheme();
+        });
+    });
+    
+    // Close button handler
+    closeButton.addEventListener('click', function() {
+        backdrop.classList.remove('visible');
+        selector.classList.remove('visible');
+    });
+    
+    // Backdrop click handler
+    backdrop.addEventListener('click', function() {
+        backdrop.classList.remove('visible');
+        selector.classList.remove('visible');
+    });
+    
+    // Prevent clicks inside the selector from closing it
+    selector.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+    
+    // Keyboard shortcut (Ctrl+4)
+    document.addEventListener('keydown', function(e) {
+        if (e.ctrlKey && e.key === '4') {
+            if (backdrop.classList.contains('visible')) {
+                backdrop.classList.remove('visible');
+                selector.classList.remove('visible');
+            } else {
+                backdrop.classList.add('visible');
+                selector.classList.add('visible');
+                updateSelectedTheme();
+            }
+        }
+    });
+});
+
+/* Element Styling from Original CSS */
+.interactive_bf202d, .interactive__972a0 {
+  border: 1px solid transparent;
+}  
+.searchBar__5ec2f, .background__1fed1, .badgeList__1fed1, .container_fea832, .iconContainer__0624f, .circle__8cc9a, .stepNumber_d9914b, .box_d9914b, .container_a45028, .cardPrimary_a298b, .perkCard_b62c4e,.guildContainer__5dba5, .wrapper__5b98e, .container_c50183, .paymentPane__01014, .outer_c0bea0, .overlay__24502, .messageContainer__95796, .searchBar__97492, .tutorial__2692d, .messages__1ccd1, .button__06eda, .friendRequestsButton__523aa, .searchBox_d9c882, .inner_a99829, .searchBar_c0e32c.container_a45028, .contentWrapper__08434, .container_cb32c7, #undiscord .multiInput, #undiscord.container, .searchResult__02a39, .emojiErrorItem__67954, .tiers_f15dca > .tier_f15dca:not(:first-child), .descriptionBox__981f7, .theme-dark .card_dc2e44, .cardPrimary__73069.editable__73069, .card_ea91d1, .avatarCard_da92c3, .viewServerButton_adff39, .button__71c22, .otherRoles__71c22, .copyInput_fffc15, .emptyChannelIcon__00de6, .button_f563df, .wrapper_f7ecac, .button_e131a9 .buttonColor_e131a9, .button_e131a9.buttonColor_e131a9, .bd-search-wrapper, .bd-modal-root, .bd-addon-error, .modeSelected__2ea32 .link__2ea32, .modeSelected__2ea32:hover .link__2ea32, .prompt__5d7c9, .perks__30359, .perksList__3bf54, .upsellFooter__5e07c, .input_ac6cb0, .interactiveSelected__972a0, .prompt_fe70ca, .optionButtonWrapper__270d7, .mainCard_f369db, .addReactButton__34c2c, .buttonInner__34c2c, .reaction_f8896c, .wrapper__44df5, .reactionBtn__23977.forceShow__23977 {
+  border: var(--border);
+}
+
+.sidebarRegion__23e6b, .categoryList_c0e32c, .categoryList__3ad28, #undiscord .sidebar, .container__551b0, .wrapper_b1e4f3, .contentWrapper__9b0f4 {
+  border-right: var(--border);
+}
+.searchResultsWrap_a9e706, .container__551b0, .container_c8ffbb {
+  border-left: var(--border);
+}
+.connectionHeader_c7f964, .header_d9c882, .header_c0e32c, .header__8ef02, #undiscord .header, #undiscord .tbar, .searchHeader_f3b986, .tierHeader_f15dca, .howItWorksImageContainer_aa72d6, .theme-dark .separator__49fc1, .bar__84522, .replyBar__841c8 {
+  border-bottom: var(--border);
+  box-shadow: none;
+}
+.footer__45690, .inspector_aeaaeb, #undiscord .footer, .theme-dark .footerSeparator__49fc1, .contentSection_b6bcee, .rewardDescriptionContainer__956c6, .bd-modal-footer, .container__9293f, .clipContainer__841c8, .navButtons_fe70ca {
+  border-top: var(--border);
+  box-shadow: none;
+}
+
+.container__9293f, .container_c8ffbb {
+    background: var(--background-secondary) !important;
+}
+
+.container__37e49, .privateChannels__35e86, .theme-dark .container__2637a, .container_e131a9 {
+    border: var(--border);
+    border-bottom: none;
+}
+
+.privateChannels__35e86, .container__2637a, .header_f37cb1, .sidebar_c48ade {
+    border-top-left-radius: 10px !important;
+}
+
+.title_f75fb0, .searchBar__35e86, .container__9293f, .header_f37cb1 {
+  border-bottom: var(--border);
+  background: var(--background-secondary);
+  box-shadow: none;
+}
+
+.title_f75fb0.container__9293f {
+  border-bottom: var(--border);
+  border-top: var(--border);
+  background: var(--background-secondary) !important;
+}
+
+.resultsGroup-r_nuzN  {
+    background-color: var(--background-secondary);
+    border-radius: var(--border-radius);
+    border-left: var(--border);
+    border-right: var(--border);
+}
+
+.bd-modal-root, .bd-addon-error {
+    border-radius: var(--border-radius);
+}
+.bd-addon-error, .prompt__5d7c9 {
+    border-color: var(--border-color) !important;
+}
+
+.actionButton_f8fa06, .bioTextArea__6a919, .input__0f084, .popout__3f413, .container__5b321, .container__8cc9a, .container__5dbf8, .accountButtonInner_c7f964 {
+  border: var(--border);
+  background-color: var(--background-secondary);
+  transition: .3s;
+} .actionButton_f8fa06:hover, .embedFull__623de, .option__3f413[aria-selected="true"]:not(.option__3f413.multi__3f413), .circle__8cc9a, .stepNumber_d9914b, .theme-dark .bottomDivider__01014, .inner_c0bea0.fullSize_c0bea0, .header__45690, .header_d9c882, #undiscord .header, .searchHeader_f3b986, .tierInProgress_c44edb, .cardHeader_b44011, .clickableContainer_e5c5d5, .theme-dark .headerExpanded__43dab, .categoryHeader_d1405b  {
+  background: var(--background-secondary-alt);
+}
+.circleIconButton__5bc7e, .nowPlayingColumn__133bf, .container__7d20c, .members_c8ffbb, .theme-dark .tierHeaderLocked_f15dca, .itemBodyInner__5dac8, .theme-dark .headerDefault__43dab, .theme-dark .headerClickable__43dab, .theme-dark .changeDetails__43dab, .footer__49fc1, .member_c8ffbb, .optionButtonWrapper__270d7, .mainCard_f369db, .banner__183e8, .wrapper__44df5 {
+  background: var(--background-secondary);
+}
+
+.lookBlank-3eh9lL {
+    color: var(--text-normal);
+}
+
+.footer-2gL1pp .lookFilled-1Gx00P.colorGrey-2DXtkV {
+    background-color: rgb(43, 50, 59) !important;
+}
+
+.background_c44edb {
+  color: var(--border-color);
+}
+
+.mentioned-xhSam7:before {
+    background-color: var(--brand-experiment);
+}
+
+.theme-dark .emptyHintCard-2mUdMe, .channelTextArea_f75fb0, .channelTextArea__74017, .button_e6e74f, .searchBarComponent__35e86, .inset_bf1984, .menu_c1e9c4, .container__9271d, .reaction__23977, .reactionBtn__23977.forceShowLook_ec6b19, .accountProfileCard__1fed1, .inner_c0bea0.biteSize_c0bea0, .container_fcf29c, .lookFilled__3f413.select__3f413, .row__0624f, .connectContainer_c7f964, .connection_c7f964, .metadataContainer_c7f964, .connectedAccountContainer_e6abe8, .card__39ec2, .popoverReactionHoverBar_f84418, .panel_c0bea0, .skuSelectModalHeader_e50a4d, .skuSelectModalContent_e50a4d, .contentWrapper__9c62c, .avatarUploaderInnerSquare_e04502, .avatarUploadIcon_e04502.hideDefaultIcon_e04502, .container_d8f25b, .root__49fc1, .tierHeaderUnlocked_f15dca, .editCard_a25a68, .featureCard_bebc5b, .howItWorksContainer_aa72d6, .mainTableContainer_dd2627, .movedTable_dd2627, .theme-dark .card__84e3e, .container_cec934, .autocomplete__13533, .upload_aa605f, .wrapper_f7ecac {
+    background-color: var(--background-secondary-alt);
+    border: var(--border);
+    border-radius: var(--border-radius);
+}
+
+.overlay_fe70ca {
+    background: linear-gradient(to top, var(--background-floating), transparent) !important;
+}
+
+.theme-dark .container_faa96b.isOpen_faa96b, .addReactButton__34c2c, .buttonInner__34c2c, .reaction_f8896c {
+    background: var(--background-floating);
+}
+
+.skuSelectModalHeader_e50a4d, .clipContainer__841c8 {
+  border-radius: var(--border-radius)  var(--border-radius) 0 0;
+  border-bottom: none;
+}
+.skuSelectModalContent_e50a4d {
+  border-radius: 0 0 var(--border-radius)  var(--border-radius);
+  border-top: none;
+}
+
+.placeholderCard_d87d30, .cardPrimary__73069.editable__73069, .optionButtonWrapper__270d7.selected__270d7 {
+  border-color: var(--border-color);
+}
+
+.theme-dark .contentWrapper-3WC1ID, .connection_c7f964, .overlay__24502, .panel_c0bea0.inner_c0bea0, .container_cb32c7, .button_f563df {
+    background-color: var(--background-secondary);
+}
+
+.theme-dark .message-2qRu38, .searchBarComponent__35e86, .iconContainer__0624f, .searchBox_d9c882.container_a45028, .inner_a99829, .container_a45028 {
+    background-color: var(--background-primary);
+}
+
+.divider-JfaTT5 {
+    --divider-color: var(--divide-color);
+}
+
+.children-19S4PO:after {
+    content: none;
+}
+
+.theme-dark .outer-1AjyKL.interactive-3B9GmY:hover, .theme-dark .outer-1AjyKL.active-1xchHY {
+    background-color: var(--background-modifier-selected);
+}
+
+.theme-light .footer-2 {
+    background-color: var(--background-primary);
+    color: var(--text-normal);
+    border-top: var(--border);
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* BD Styles */
+.bd-addon-list .bd-addon-header {
+    border: var(--border);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+.bd-description-wrap {
+    border-left: var(--border);
+    border-right: var(--border);
+}
+.bd-footer {
+    border: var(--border);
+    border-top: none;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+#bd-editor-controls {
+    border: var(--border);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+.monaco-editor .margin {
+    background: var(--background-secondary-alt);
+    border-right: var(--border);
+}
+.monaco-editor, .monaco-editor-background, .monaco-editor .inputarea.ime-input, .minimap-decorations-layer, .vs-dark .monaco-scrollable-element>.scrollbar>.slider {
+    background-color: var(--background-secondary);
+}
+.monaco-editor {
+    border: var(--border);
+    border-top: none;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+.codeContainer__75297 svg {
+    color: var(--interactive-normal);
+    cursor: pointer;
+}
+.bd-addon-error-stack code {
+    background: var(--background-primary);
+    border: var(--border);
+    border-radius: var(--border-radius);
+}
+
+/* Theme Switcher - Ctrl+4 Functionality */
+:root {
+    --theme-index: 0;
+}
+
+/* Theme list - add more themes here */
+.theme-list {
+    --theme-count: 7; /* Update this when adding new themes */
+}
+
+/* Theme Switcher Keyboard Shortcut */
+@keyframes theme-switch-notification {
+    0% { opacity: 0; transform: translateY(20px); }
+    20% { opacity: 1; transform: translateY(0); }
+    80% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-20px); }
+}
+
+#theme-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--background-floating);
+    color: var(--text-normal);
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    border: var(--border);
+    box-shadow: var(--elevation-high);
+    z-index: 9999;
+    font-weight: bold;
+    pointer-events: none;
+    opacity: 0;
+}
+
+#theme-notification.show {
+    animation: theme-switch-notification 2s ease-in-out forwards;
+}
+
+/* Add the theme switcher script */
+document.addEventListener('DOMContentLoaded', function() {
+    // Create theme notification element
+    const notification = document.createElement('div');
+    notification.id = 'theme-notification';
+    document.body.appendChild(notification);
+    
+    // Available themes
+    const themes = [
+        'dark',
+        'light',
+        'midnight',
+        'nord',
+        'dracula',
+        'solarized',
+        'synthwave',
+        'forest'
+    ];
+    
+    // Get current theme or set default
+    let currentThemeIndex = parseInt(localStorage.getItem('discord-theme-index') || '0');
+    let currentTheme = localStorage.getItem('discord-theme') || themes[currentThemeIndex];
+    
+    // Apply current theme
+    document.documentElement.className = `theme-${currentTheme}`;
+    
+    // Handle Ctrl+4 shortcut
+    document.addEventListener('keydown', function(e) {
+        if (e.ctrlKey && e.key === '4') {
+            // If theme selector exists and is visible, just toggle it
+            const existingSelector = document.getElementById('theme-selector');
+            const existingBackdrop = document.getElementById('theme-selector-backdrop');
+            
+            if (existingSelector && existingBackdrop) {
+                if (existingSelector.classList.contains('visible')) {
+                    existingSelector.classList.remove('visible');
+                    existingBackdrop.classList.remove('visible');
+                } else {
+                    existingSelector.classList.add('visible');
+                    existingBackdrop.classList.add('visible');
+                }
+                return;
+            }
+            
+            // Otherwise cycle through themes
+            currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+            currentTheme = themes[currentThemeIndex];
+            
+            // Save theme preference
+            localStorage.setItem('discord-theme-index', currentThemeIndex.toString());
+            localStorage.setItem('discord-theme', currentTheme);
+            
+            // Apply theme
+            document.documentElement.className = `theme-${currentTheme}`;
+            
+            // Show notification
+            notification.textContent = `Theme: ${currentTheme.charAt(0).toUpperCase() + currentTheme.slice(1)}`;
+            notification.classList.remove('show');
+            void notification.offsetWidth; // Trigger reflow
+            notification.classList.add('show');
+        }
+    });
+});
